@@ -19,6 +19,14 @@ A personal playground to practice, build, and refine frontend skills through han
 4. Build (example):
    - `npm run build`
 
+
+### webpack basic setup
+```bash
+
+npm install --save-dev webpack webpack-cli webpack-dev-server
+
+```
+
 ### Tech & Practices
 - Tooling: Webpack, TypeScript (where applicable), ESLint, Prettier
 - Accessibility: semantic HTML first, keyboard and screen reader checks
