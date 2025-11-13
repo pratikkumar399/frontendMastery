@@ -1,1 +1,3 @@
 node_modules
+dist
+webpack-lab/dist/index.html
