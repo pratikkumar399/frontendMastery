@@ -10,17 +10,17 @@ export default function Home() {
     time: string;
   }[]>([]);
 
+  const poll = async () => {
+    const res = await fetch(
+      `/api/notifications?lastId=${lastIdRef.current}`
+    );
+
+    const data = await res.json();
+
+    setNotifications(data);
+  };
+
   useEffect(() => {
-    const poll = async () => {
-      const res = await fetch(
-        `/api/notifications?lastId=${lastIdRef.current}`
-      );
-
-      const data = await res.json();
-
-      setNotifications(data);
-    };
-
     poll(); // initial call
 
     const interval = setInterval(poll, 1000);
